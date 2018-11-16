@@ -3,7 +3,7 @@ This is a ST3 plugin which:
 
 - Gets the program name in the form of the url from Codeforces/Codechef
 - Parses the problem page
-- Generates a program file (default: .cpp file) with ready made code (default: cpp.snippets)
+- Generates a program file (default: .cpp file) with ready made code (snippet)
 - Opens the file in current window
 
 ### Keyboard shortcuts
