@@ -1,10 +1,11 @@
 {
+    //All settings are mandatory
     //Codeforces directory
-    "parent_dir": "C:\\Users\\prash\\Documents\\Salil\\Programming\\Competitive_Programming\\Programs\\C++\\Codeforces",
+    "parent_dir": "",
     //Extension for new files
     "extension": "cpp",
     //Snippet to begin your new file
-    "snippets": "C:\\Users\\prash\\AppData\\Roaming\\Sublime Text 3\\Installed Packages\\cpp.snippets",
+    "snippets": "",
     //Codechef directory
-    "codechef_dir": "C:\\Users\\prash\\Documents\\Salil\\Programming\\Competitive_Programming\\Programs\\C++\\CodeChef"
+    "codechef_dir": ""
 }
