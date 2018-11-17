@@ -5,7 +5,7 @@
     //Extension for new files
     "extension": "cpp",
     //Snippet to begin your new file
-    "snippets": "",
+    "snippets": "${packages}/GetCode/cpp.snippets",
     //Codechef directory
     "codechef_dir": ""
 }
