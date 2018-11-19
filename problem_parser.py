@@ -37,7 +37,7 @@ def createFile(dir_path, title, extension, codechef_directory):
         os.makedirs(dir_path, mode=0o777)
         os.chmod(dir_path, 0o777)
     if "codechef" in last_url:
-        filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[0]) + '.' + extension)
+        filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + '.' + extension)
     else:
         filename = os.path.join(dir_path, title + "_" +  str(re.findall(r'\d+',last_url)[0])  + str(re.findall(r'[A-Z]',last_url)[0]) + '.' + extension)
     try:
