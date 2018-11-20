@@ -15,7 +15,7 @@ For all Operating Systems, ctrl+alt+x opens a new dialogue box which takes the C
 After installing, it is necessary to configure the settings(setting the default directory and snippets)
 ctrl+alt+x opens a new dialogue box which takes the Codeforces/Codechef program url as user input
 
-###Supported websites(for now)
+### Supported websites(for now)
 
 1. Codechef
 2. Codforces
