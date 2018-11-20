@@ -24,6 +24,10 @@ def get_codechef_dir(settings, title):
     parent_dir = settings.get("codechef_dir", '.')
     return os.path.join(parent_dir)
 
+def get_spoj_dir(settings, title):
+    parent_dir = settings.get("spoj_dir", '.')
+    return os.path.join(parent_dir)
+
 
 # Get the extensions of the file
 def get_extension(settings):
@@ -32,7 +36,7 @@ def get_extension(settings):
 
 # Create the program file
 # TODO: make this method not dependent on any programming language
-def createFile(dir_path, title, extension, codechef_directory):
+def createFile(dir_path, title, extension, codechef_directory, spoj_directory):
     if not os.path.exists(dir_path):
         os.makedirs(dir_path, mode=0o777, exist_ok=True)
     if "codechef" in last_url:
@@ -40,6 +44,11 @@ def createFile(dir_path, title, extension, codechef_directory):
             filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + str(re.findall(r'\d+',last_url)[-1]) + '.' + extension)
         except IndexError:
             filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + '.' + extension)
+    elif "spoj" in last_url:
+        try:
+            filename = os.path.join(spoj_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + str(re.findall(r'\d+',last_url)[-1]) + '.' + extension)
+        except IndexError:
+            filename = os.path.join(spoj_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + '.' + extension)
     else:
         filename = os.path.join(dir_path, title + "_" +  str(re.findall(r'\d+',last_url)[0])  + str(re.findall(r'[A-Z]',last_url)[0]) + '.' + extension)
     try:
@@ -56,7 +65,7 @@ def get_title(url):
     from bs4 import BeautifulSoup
     global last_url
     last_url = url
-    if "codechef" in last_url:
+    if "codechef" in last_url or "spoj" in last_url:
         return ""
     try:
         reponse = urllib.request.urlopen(url)
@@ -81,7 +90,8 @@ def fetch(self, url):
     dir_path = get_parent_dir(settings, title)
     extension = get_extension(settings)
     codechef_directory = get_codechef_dir(settings, title)
-    file = createFile(dir_path, title, extension, codechef_directory)
+    spoj_directory = get_spoj_dir(settings, title)
+    file = createFile(dir_path, title, extension, codechef_directory, spoj_directory)
 
     if file is None:
         return
