@@ -17,6 +17,6 @@ ctrl+alt+x opens a new dialogue box which takes the Codeforces/Codechef program 
 
 ###Supported websites(for now)
 
-Codechef
-Codforces
-SPOJ
+1. Codechef
+2. Codforces
+3. SPOJ
