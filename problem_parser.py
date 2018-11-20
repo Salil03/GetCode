@@ -34,10 +34,12 @@ def get_extension(settings):
 # TODO: make this method not dependent on any programming language
 def createFile(dir_path, title, extension, codechef_directory):
     if not os.path.exists(dir_path):
-        os.makedirs(dir_path, mode=0o777)
-        os.chmod(dir_path, 0o777)
+        os.makedirs(dir_path, mode=0o777, exist_ok=True)
     if "codechef" in last_url:
-        filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + '.' + extension)
+        try:
+            filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + str(re.findall(r'\d+',last_url)[-1]) + '.' + extension)
+        except IndexError:
+            filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + '.' + extension)
     else:
         filename = os.path.join(dir_path, title + "_" +  str(re.findall(r'\d+',last_url)[0])  + str(re.findall(r'[A-Z]',last_url)[0]) + '.' + extension)
     try:
@@ -45,10 +47,7 @@ def createFile(dir_path, title, extension, codechef_directory):
         return filename
     except Exception as e:
         print ("Exception: ", e)
-        sublime.error_message(
-            "Unable to create file: 'Permission denied'," +
-            " please specify another folder in Codeforces.sublime-settings" +
-            " or change the permissions of the folder")
+        sublime.error_message("Unable to create file in the specified folder")
         return None
 
 
@@ -90,24 +89,25 @@ def fetch(self, url):
     snippets_file_name = settings.get('snippets', None)
     snippets_content = ''
     if snippets_file_name is not None:
-        snippets_file = open(snippets_file_name)
-        try:
-            snippets_content = snippets_file.readlines()
-            snippets_file.close()
-        except Exception as e:
-            sublime.error_message("File not found " + snippets_file)
-            print (e)
-            snippets_file.close()
-            return
+        with open(snippets_file_name) as snippets_file:
+            try:
+                snippets_content = snippets_file.readlines()
+                snippets_file.close()
+            except Exception as e:
+                sublime.error_message("File not found " + snippets_file)
+                print (e)
+                snippets_file.close()
+                return
 
-    open(file, 'w').writelines(snippets_content)
-    sublime.active_window().open_file(file)
+    with open(file, 'w') as newfile:
+        newfile.writelines(snippets_content)
+    return file
 
 
 class CodeforcesProblemCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         def on_done(url):
-            fetch(self, url)
+            self.view.window().open_file(fetch(self, url))
 
         sublime.active_window().show_input_panel(
             "Enter program url",
