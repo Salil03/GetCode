@@ -7,16 +7,16 @@ This is a ST3 plugin which:
 
 ### Keyboard shortcuts
 
-For all Operating Systems, ctrl+alt+x opens a new dialogue box which takes the Codeforces/Codechef program url as user input 
+For all Operating Systems, ctrl+alt+x opens a new dialogue box which takes the problem url as user input 
 
 
 ### How to use it
 
 After installing, it is necessary to configure the settings(setting the default directory and snippets)
-ctrl+alt+x opens a new dialogue box which takes the Codeforces/Codechef program url as user input
+ctrl+alt+x opens a new dialogue box which takes the problem url as user input
 
 ### Supported websites(for now)
 
 1. Codechef
-2. Codforces
+2. Codeforces
 3. SPOJ
