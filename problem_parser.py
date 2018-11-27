@@ -37,8 +37,7 @@ def get_extension(settings):
 # Create the program file
 # TODO: make this method not dependent on any programming language
 def createFile(dir_path, title, extension, codechef_directory, spoj_directory):
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path, mode=0o777, exist_ok=True)
+    os.makedirs(dir_path, mode=0o777, exist_ok=True)
     if "codechef" in last_url:
         try:
             filename = os.path.join(codechef_directory, str(re.findall(r'[A-Z]+', last_url)[-1]) + str(re.findall(r'\d+',last_url)[-1]) + '.' + extension)
@@ -103,9 +102,8 @@ def fetch(self, url):
             try:
                 snippets_content = snippets_file.readlines()
                 snippets_file.close()
-            except Exception as e:
+            except FileNotFoundError:
                 sublime.error_message("File not found " + snippets_file)
-                print (e)
                 snippets_file.close()
                 return
 
