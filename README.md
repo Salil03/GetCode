@@ -20,3 +20,4 @@ ctrl+alt+x opens a new dialogue box which takes the problem url as user input
 1. Codechef
 2. Codeforces
 3. SPOJ
+4. Virtual Judge
