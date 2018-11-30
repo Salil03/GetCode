@@ -9,5 +9,7 @@
     //Codechef directory
     "codechef_dir": "",
     //SPOJ directory
-    "spoj_dir": ""
+    "spoj_dir": "",
+    //virtual judge directory
+    "vjudge_dir": ""
 }
