@@ -20,7 +20,7 @@ For all Operating Systems, ctrl+alt+x opens a new dialogue box which takes the p
 
  [![enter image description here][4]][5]
 
- 4. At the bottom of the Sublime window, an input box will appear. Paste the URL of this package : [https://github.com/Salil03/GetCode/releases][6].
+ 4. At the bottom of the Sublime window, an input box will appear. Paste the URL of this package : [https://github.com/Salil03/GetCode][6].
  5. Now the Repo has been added to Package Control, it's not installed though 
 
  6. Open Package Control again (like in step 2).
