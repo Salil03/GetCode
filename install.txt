@@ -1,8 +1,8 @@
 # GetCode
-This is a ST3 plugin which:
+This is an ST3 plugin which:
 
-1. Take the url of a problem such as https://www.codechef.com/problems/INVLIS.
-3. Parse the url and get the problem code(In this case it is **INVLIS**).
+1. Take the URL of a problem such as https://www.codechef.com/problems/INVLIS.
+3. Parse the URL and get the problem code(In this case it is **INVLIS**).
 4. Create a new .cpp or .py file with a pre-determined template(cpp.snippets which is customized via settings).
 
 ### Keyboard shortcuts
@@ -12,23 +12,18 @@ For all Operating Systems, ctrl+alt+x opens a new dialogue box which takes the p
 
 ### How to use it
 
-After installing, it is necessary to configure the settings(setting the default directory and snippets)
-ctrl+alt+x opens a new dialogue box which takes the problem url as user input
+After installing, it is necessary to configure the settings(setting the default directory and snippets).
+
+
+After configuring the settings, ctrl+alt+x opens a new dialogue box which takes the problem url as user input
 
 ### Supported websites(for now)
 
 1. Codechef
 2. Codeforces
 3. SPOJ
+4. Virtual Judge
 
+CREATED BY:
 
-CREATED BY 
-
-:'######:::::'###::::'##:::::::'####:'##:::::::
-'##... ##:::'## ##::: ##:::::::. ##:: ##:::::::
- ##:::..:::'##:. ##:: ##:::::::: ##:: ##:::::::
-. ######::'##:::. ##: ##:::::::: ##:: ##:::::::
-:..... ##: #########: ##:::::::: ##:: ##:::::::
-'##::: ##: ##.... ##: ##:::::::: ##:: ##:::::::
-. ######:: ##:::: ##: ########:'####: ########:
-:......:::..:::::..::........::....::........::
+01010011 01000001 01001100 01001001 01001100
