@@ -1,8 +1,8 @@
 # GetCode
-This is a ST3 plugin which:
+This is an ST3 plugin which:
 
-1. Take the url of a problem such as https://www.codechef.com/problems/INVLIS.
-3. Parse the url and get the problem code(In this case it is **INVLIS**).
+1. Take the URL of a problem such as https://www.codechef.com/problems/INVLIS.
+3. Parse the URL and get the problem code(In this case it is **INVLIS**).
 4. Create a new .cpp or .py file with a pre-determined template(cpp.snippets which is customized via settings).
 
 ### Keyboard shortcuts
@@ -16,22 +16,12 @@ For all Operating Systems, ctrl+alt+x opens a new dialogue box which takes the p
 
  [![Open Package Control from the Preferences Menu][2]][3]
 
- 3. Select `Package Control: Add Repository`
-
- [![enter image description here][4]][5]
-
- 4. At the bottom of the Sublime window, an input box will appear. Paste the URL of this package : [https://github.com/Salil03/GetCode][6].
- 5. Now the Repo has been added to Package Control, it's not installed though 
-
- 6. Open Package Control again (like in step 2).
-
  7. Select `Package Control: Install Packages`
  
  [![enter image description here][7]][8]
 
- 8. Now you should be able to search for, and install the GetCode Package.
+ 8. Now you should be able to search for and install the GetCode Package.
 
- 9. I hope to add the package to Package Control Repository of Sublime Text.
 
 ### How to use it
 
