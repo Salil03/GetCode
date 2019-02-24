@@ -1,5 +1,5 @@
 # GetCode
-This is an ST3 plugin which:
+This is an Sublime Text plugin which:
 
 1. Take the URL of a problem such as https://www.codechef.com/problems/INVLIS.
 3. Parse the URL and get the problem code(In this case it is **INVLIS**).
