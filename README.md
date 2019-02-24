@@ -1,7 +1,7 @@
 # GetCode
 This is an Sublime Text plugin which:
 
-1. Take the URL of a problem such as https://www.codechef.com/problems/INVLIS.
+1. Take the URL of a competitive programming problem such as https://www.codechef.com/problems/INVLIS.
 3. Parse the URL and get the problem code(In this case it is **INVLIS**).
 4. Create a new .cpp or .py file with a pre-determined template(cpp.snippets which is customized via settings).
 
