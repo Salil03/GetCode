@@ -37,6 +37,12 @@ def get_vjudge_dir(settings, title):
 def get_extension(settings):
     return settings.get('extension', '')
 
+def change_url(filename):
+    with open(filename, 'r') as new_file:
+        filedata = new_file.read()
+    filedata = filedata.replace("url", last_url)
+    with open(filename, 'w') as new_file:
+        new_file.write(filedata)
 
 # Create the program file
 # TODO: make this method not dependent on any programming language
@@ -119,6 +125,7 @@ def fetch(self, url):
 
     with open(file, 'w') as newfile:
         newfile.writelines(snippets_content)
+    change_url(file)
     return file
 
 
