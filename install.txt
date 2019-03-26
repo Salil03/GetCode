@@ -26,4 +26,4 @@ After configuring the settings, ctrl+alt+x opens a new dialogue box which takes 
 
 CREATED BY:
 
-01010011 01000001 01001100 01001001 01001100
+01010011 01100001 01101100 01101001 01101100 00110000 00110011
